@@ -39,7 +39,7 @@ RUN yum install --disablerepo=\* --enablerepo=rhel-7-server-rpms -y yum-utils &&
     yum-config-manager --enable rhel-7-server-dotnet-beta-rpms && \
     yum install -y --setopt=tsflags=nodocs rh-nodejs6-npm rh-dotnet20-dotnet-sdk-2.0 && \
     yum clean all && \
-    mkdir -p /opt/app-root/{src,publish,warmup} 
+    mkdir -p /opt/app-root/{src,publish,warmup} && \
     chown -R 1001:0 /opt/app-root
 
 ENV ENABLED_COLLECTIONS="$ENABLED_COLLECTIONS rh-nodejs6"
