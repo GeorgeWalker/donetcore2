@@ -31,7 +31,7 @@ COPY ./s2i/bin/ /usr/libexec/s2i
 USER 0
 
 # TODO: remove the beta repo once RPMs reach the full release
-RUN yum install --disablerepo=\* --enablerepo=rhel-7-server-rpms -y yum-utils && \
+RUN yum install --disablerepo=\* --enablerepo=rhel-7-server-rpms -y yum-utils gdb && \
     yum-config-manager --enable rhel-server-rhscl-7-rpms && \
     yum-config-manager --enable rhel-7-server-dotnet-rpms && \
     yum-config-manager --enable rhel-7-server-rpms && \
