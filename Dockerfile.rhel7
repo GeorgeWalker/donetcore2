@@ -43,8 +43,6 @@ RUN yum install --disablerepo=\* --enablerepo=rhel-7-server-rpms -y yum-utils gd
     chown -R 1001:0 /opt/app-root
 
 	
-RUN debuginfo-install rh-dotnet20-dotnet-host-2.0.0-0.8.el7.x86_64
-	
 ENV ENABLED_COLLECTIONS="$ENABLED_COLLECTIONS rh-nodejs6"
 
 # In order to drop the root user, we have to make some directories world
